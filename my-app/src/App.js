@@ -125,7 +125,7 @@ function App() {
       <h1>JALICUS PROGRAMS</h1>
         
         <p id="playerPara">
-          How many players?
+          How many players??
           <br/>
           <input type="number" id="numPlayers" value={numPlayersValue} onChange={handleChange} />
           <br/>

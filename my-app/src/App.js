@@ -8,16 +8,15 @@ function App() {
     const [data, setData] = useState([]);
     const [roundData, setRoundData] = useState([]);
     const [winner, setWinner] = useState([]);
-    
 
     function players() {
       document.getElementById("playerPara").style.display = "none";
       document.getElementById("namePara").style.display = "block";
       var i;
-      let scoreboard = [];
+      var scoreboard = [];
       
       for (i = 0; i < numPlayersValue; i++) {
-        scoreboard.push({name:"",dealer:false,currentBid:0,currentScore:0,totalScore:0,totalLosses:0,winner:false});
+        scoreboard.push({name:"",dealer:false,currentBid:0,currentScore:0,totalScore:0,totalLosses:0});
       }
       setData(scoreboard);
     }
@@ -96,6 +95,7 @@ function App() {
     }
 
     
+    
 
 
   
@@ -104,7 +104,7 @@ function App() {
 
     <div className="App">
       <header className="App-header">
-      <h1>JALICUS PROGRAMS</h1>
+      <h1>Tofighian Kokm</h1>
         
         <p id="playerPara">
           How many players??
@@ -164,7 +164,7 @@ function App() {
             )}
         </table>
             <input type="submit" value="New round" onClick={nextRound} />
-            <input type="submit" value="End" onClick={bye}/>
+            <input type="submit" value="End"/>
         </div>
 
 

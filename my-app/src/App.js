@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 
 
-
-
-
 function App() {
 
     let numPlayersValue;
@@ -17,10 +14,10 @@ function App() {
       document.getElementById("playerPara").style.display = "none";
       document.getElementById("namePara").style.display = "block";
       var i;
-      var scoreboard = [];
+      let scoreboard = [];
       
       for (i = 0; i < numPlayersValue; i++) {
-        scoreboard.push({name:"",dealer:false,currentBid:0,currentScore:0,totalScore:0,totalLosses:0});
+        scoreboard.push({name:"",dealer:false,currentBid:0,currentScore:0,totalScore:0,totalLosses:0,winner:false});
       }
       setData(scoreboard);
     }
@@ -98,22 +95,7 @@ function App() {
       document.getElementById("accPara").style.display = "none";
     }
 
-    function bye(){
-      setData(roundData);
-
-      var tempWinner = {totalScore: 0};
-
-      for (var i = 0; i < data.length; i++) {
-        if(tempWinner.totalScore < data[i].totalScore){
-          tempWinner = data[i];
-        }
-      }
-      setWinner(tempWinner);
-
-
-      document.getElementById("resultsPara").style.display = "none";
-      document.getElementById("endPara").style.display = "block";
-    }
+    
 
 
   
